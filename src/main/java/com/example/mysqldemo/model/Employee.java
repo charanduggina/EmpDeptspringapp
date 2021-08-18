@@ -1,5 +1,6 @@
 package com.example.mysqldemo.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
@@ -31,6 +32,7 @@ public class Employee {
     private String salary;
 
 
+    @JsonManagedReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(foreignKey = @ForeignKey(name = "Deptnumber"), name = "Deptnumber")
     private Department department;

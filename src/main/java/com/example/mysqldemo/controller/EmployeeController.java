@@ -7,10 +7,12 @@ import com.example.mysqldemo.dto.ResponseDTO;
 import com.example.mysqldemo.mapper.DepartmentMapper;
 import com.example.mysqldemo.model.Department;
 import com.example.mysqldemo.model.Employee;
+import com.example.mysqldemo.service.EmployeeControllerService;
 import com.example.mysqldemo.service.EmployeeService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
+import org.eclipse.jdt.core.compiler.InvalidInputException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +32,7 @@ public class EmployeeController {
 
     // here we are not creating any class or oject for the interface
     @Autowired
-    EmployeeRepo repo;
+    private EmployeeControllerService empservice;
     @Autowired
     private EmployeeService employeeService;
     @Autowired
@@ -39,6 +41,7 @@ public class EmployeeController {
     private DepartmentMapper departmentMapper;
 
 
+    /*
     @RequestMapping("/addemployee")
     public String addemployee(Employee employee){
         repo.save(employee);
@@ -52,22 +55,25 @@ public class EmployeeController {
         mv.addObject(employee);
         return mv;
     }
+
+     */
     @GetMapping("/employees")
     @ApiOperation(
             value= "get all the Employee list",
             notes = "this api gives the list of all the employee saved in the database"
     )
-    public List<Employee> getEmployees(){
-        return repo.findAll();
+    public ResponseEntity<List<Employee>> getEmployees(){
+        return new ResponseEntity( empservice.getAllEmployees(), HttpStatus.OK);
     }
     @RequestMapping("/employee/{empid}")
-    public Optional<Employee> getEmployee(@ApiParam(value = "ID of the employee you want to retrive",required = true) @PathVariable("empid") int empid){
+    public ResponseEntity<Optional<Employee>> getEmployee(@ApiParam(value = "ID of the employee you want to retrive",required = true) @PathVariable("empid") int empid) throws InvalidInputException {
         log.trace("A TRACE Message");
         log.debug("A DEBUG Message");
         log.info("An INFO Message");
         log.warn("A WARN Message");
         log.error("An ERROR Message");
-        return repo.findById(empid);
+
+        return new ResponseEntity(empservice.getEmployeeById(empid),HttpStatus.OK);
     }
 
     @PostMapping("/employee")
@@ -75,21 +81,28 @@ public class EmployeeController {
             value= "post the employee to db",
             notes = "the id fifield in the post api is auto incremented hence do not send the id in the post api"
     )
-    public ResponseEntity<EmployeeDTO> restaddemployee(@RequestBody EmployeeDTO employeeDTO){
-        System.out.println("hi testing 1"+employeeDTO);
-        Department department = departmentRepo.findById(employeeDTO.getDepartmentDTO().getDeptnumber()).orElseThrow(()-> new RuntimeException("No department found with the given id"));
-        Employee employee = departmentMapper.toModel(employeeDTO);
-        employee.setDepartment(department);
+    public ResponseEntity<EmployeeDTO> restAddEmployee(@RequestBody EmployeeDTO employeeDTO){
+        //System.out.println("hi testing 1"+employeeDTO);
 
-        return new ResponseEntity( departmentMapper.toDto(repo.save(employee)),HttpStatus.ACCEPTED);//.ok( EmployeeDTO.fromEmployee(savedemployee));
+
+        return new ResponseEntity( empservice.addEmployee(employeeDTO),HttpStatus.ACCEPTED);//.ok( EmployeeDTO.fromEmployee(savedemployee));
 
     }
     @DeleteMapping("/employee/{empid}")
-    public String deleteEmployee(@PathVariable int empid){
-        Employee employee = repo.getOne(empid);
-        repo.delete(employee);
-        return "deleted";
+    public ResponseEntity<String> deleteEmployee(@PathVariable int empid) throws InvalidInputException {
+       empservice.deleteEmployee(empid);
+        return new ResponseEntity<>("Employee with ID :" + empid + " deleted successfully", HttpStatus.OK);
     }
+
+    @PutMapping("/employee")
+    public ResponseEntity<EmployeeDTO> editEmployee(@RequestBody EmployeeDTO employeeDTO){
+        return new ResponseEntity( empservice.editEmployee(employeeDTO),HttpStatus.ACCEPTED);
+    }
+
+
+
+
+
     @GetMapping("/hello")
     ResponseEntity<String> hello() {
         return new ResponseEntity<>("Hello World!", HttpStatus.OK);
@@ -103,3 +116,4 @@ public class EmployeeController {
     }
 
 }
+

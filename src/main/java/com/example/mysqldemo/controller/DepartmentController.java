@@ -1,12 +1,12 @@
 package com.example.mysqldemo.controller;
 
 import com.example.mysqldemo.dao.DepartmentRepo;
-import com.example.mysqldemo.dao.EmployeeRepo;
 import com.example.mysqldemo.dto.DepartmentDTO;
-import com.example.mysqldemo.dto.EmployeeDTO;
 import com.example.mysqldemo.mapper.DepartmentMapper;
 import com.example.mysqldemo.model.Department;
 import com.example.mysqldemo.model.Employee;
+import com.example.mysqldemo.service.DepartmentControllerService;
+import org.eclipse.jdt.core.compiler.InvalidInputException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,33 +21,34 @@ import java.util.Optional;
 
 public class DepartmentController {
     @Autowired
-    DepartmentMapper deptmap;
+    private DepartmentMapper deptmap;
     @Autowired
-    DepartmentRepo repo;
+    private DepartmentRepo repo;
+    @Autowired
+    private DepartmentControllerService deptService;
     @GetMapping("/departments")
-    public List<Department> getDepartment(){
+    public ResponseEntity<List<Employee>> getDepartment(){
 
-       return repo.findAll();
+        return new ResponseEntity( deptService.getAllDepartments(), HttpStatus.OK);
 
     }
 
     @RequestMapping("/department/{Deptnumber}")
-    public Optional<Department> getDepartment(@PathVariable("Deptnumber") int Deptnumber){
-        return repo.findById(Deptnumber);
+    public ResponseEntity<Optional<Department>> getDepartment(@PathVariable("Deptnumber") int deptnumber) throws InvalidInputException {
+        return new ResponseEntity(deptService.getDepartmentById(deptnumber),HttpStatus.OK);
     }
 
     @PostMapping("/department")
     public ResponseEntity<DepartmentDTO> addDepartment(Department department){
-        Department saveddepartment = repo.save(department);
 
-        return new ResponseEntity( deptmap.modelTODto(saveddepartment), HttpStatus.CREATED);//.ok( EmployeeDTO.fromEmployee(savedemployee));
+
+        return new ResponseEntity( deptService.saveDepartment(department), HttpStatus.CREATED);//.ok( EmployeeDTO.fromEmployee(savedemployee));
 
     }
     @DeleteMapping("/department/{Deptnumber}")
-    public String deleteDepartment(@PathVariable("Deptnumber") int Deptnumber){
-        Department department = repo.getOne(Deptnumber);
-        repo.delete(department);
-        return "deleted";
+    public  ResponseEntity<String> deleteDepartment(@PathVariable("Deptnumber") int Deptnumber) throws InvalidInputException {
+        deptService.deleteDepartment(Deptnumber);
+        return new ResponseEntity<>("Department with ID :" + Deptnumber + " deleted successfully", HttpStatus.OK);
     }
 
 

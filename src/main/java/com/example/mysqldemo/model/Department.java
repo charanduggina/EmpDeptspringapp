@@ -1,6 +1,8 @@
 package com.example.mysqldemo.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -19,6 +21,7 @@ public class Department {
     private int Deptnumber;
     private String Deptname;
     private String Location;
+    @JsonBackReference
     @OneToMany(mappedBy = "department", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Employee> employee;
 
