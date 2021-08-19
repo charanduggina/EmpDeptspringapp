@@ -1,8 +1,8 @@
-2021-08-18 00:10:50,378 INFO org.springframework.boot.StartupInfoLogger [main] Starting MysqldemoApplication using Java 16.0.1 on Admins-MacBook-Pro.local with PID 3216 (/Users/Licious/Desktop/testmysql/mysqldemo copy/target/classes started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
-2021-08-18 00:10:50,383 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-18 00:10:50,384 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2021-08-18 00:10:56,814 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'departmentController': Unsatisfied dependency expressed through field 'deptService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.mysqldemo.service.DepartmentControllerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2021-08-18 00:10:56,908 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+2021-08-19 00:12:19,004 INFO org.springframework.boot.StartupInfoLogger [main] Starting DepartmentTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 5052 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-19 00:12:19,012 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-19 00:12:19,019 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-19 00:12:27,201 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'departmentController': Unsatisfied dependency expressed through field 'deptService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'departmentControllerService': Unsatisfied dependency expressed through field 'departmentDTO'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.mysqldemo.dto.DepartmentDTO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-08-19 00:12:27,300 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
 
 ***************************
 APPLICATION FAILED TO START
@@ -10,7 +10,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field deptService in com.example.mysqldemo.controller.DepartmentController required a bean of type 'com.example.mysqldemo.service.DepartmentControllerService' that could not be found.
+Field departmentDTO in com.example.mysqldemo.service.DepartmentControllerService required a bean of type 'com.example.mysqldemo.dto.DepartmentDTO' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -18,13 +18,128 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.example.mysqldemo.service.DepartmentControllerService' in your configuration.
+Consider defining a bean of type 'com.example.mysqldemo.dto.DepartmentDTO' in your configuration.
 
-2021-08-18 00:13:11,225 INFO org.springframework.boot.StartupInfoLogger [main] Starting MysqldemoApplication using Java 16.0.1 on Admins-MacBook-Pro.local with PID 3230 (/Users/Licious/Desktop/testmysql/mysqldemo copy/target/classes started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
-2021-08-18 00:13:11,229 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-18 00:13:11,229 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2021-08-18 00:13:17,281 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'departmentController': Unsatisfied dependency expressed through field 'deptService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.mysqldemo.service.DepartmentControllerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2021-08-18 00:13:17,367 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+2021-08-19 00:12:27,304 ERROR org.springframework.test.context.TestContextManager [main] Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@46271dd6] to prepare test instance [com.example.mysqldemo.DepartmentTest@6a358906]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'departmentController': Unsatisfied dependency expressed through field 'deptService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'departmentControllerService': Unsatisfied dependency expressed through field 'departmentDTO'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.mysqldemo.dto.DepartmentDTO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 67 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'departmentControllerService': Unsatisfied dependency expressed through field 'departmentDTO'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.mysqldemo.dto.DepartmentDTO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 86 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.mysqldemo.dto.DepartmentDTO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1346)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 100 common frames omitted
+2021-08-19 00:22:19,222 INFO org.springframework.boot.StartupInfoLogger [main] Starting MysqldemoApplication using Java 16.0.1 on Admins-MacBook-Pro.local with PID 5148 (/Users/Licious/Desktop/testmysql/mysqldemo copy/target/classes started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-19 00:22:19,235 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-19 00:22:19,235 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-19 00:22:28,872 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'departmentController': Unsatisfied dependency expressed through field 'deptService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'departmentControllerService': Unsatisfied dependency expressed through field 'departmentDTO'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.mysqldemo.dto.DepartmentDTO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-08-19 00:22:29,003 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
 
 ***************************
 APPLICATION FAILED TO START
@@ -32,7 +147,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field deptService in com.example.mysqldemo.controller.DepartmentController required a bean of type 'com.example.mysqldemo.service.DepartmentControllerService' that could not be found.
+Field departmentDTO in com.example.mysqldemo.service.DepartmentControllerService required a bean of type 'com.example.mysqldemo.dto.DepartmentDTO' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -40,13 +155,94 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.example.mysqldemo.service.DepartmentControllerService' in your configuration.
+Consider defining a bean of type 'com.example.mysqldemo.dto.DepartmentDTO' in your configuration.
 
-2021-08-18 00:13:51,230 INFO org.springframework.boot.StartupInfoLogger [main] Starting MysqldemoApplication using Java 16.0.1 on Admins-MacBook-Pro.local with PID 3236 (/Users/Licious/Desktop/testmysql/mysqldemo copy/target/classes started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
-2021-08-18 00:13:51,234 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-18 00:13:51,235 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2021-08-18 00:13:58,054 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-18 00:14:00,833 INFO org.springframework.boot.StartupInfoLogger [main] Started MysqldemoApplication in 15.269 seconds (JVM running for 15.967)
-2021-08-18 00:14:23,001 ERROR com.example.mysqldemo.exceptionHelper.ExceptionHelper [http-nio-8080-exec-6] Exception: 
-2021-08-18 00:14:53,892 ERROR com.example.mysqldemo.exceptionHelper.ExceptionHelper [http-nio-8080-exec-4] Invalid Input Exception: 
-2021-08-18 00:14:59,288 ERROR com.example.mysqldemo.exceptionHelper.ExceptionHelper [http-nio-8080-exec-5] Exception: 
+2021-08-19 00:29:48,902 INFO org.springframework.boot.StartupInfoLogger [main] Starting MysqldemoApplication using Java 16.0.1 on Admins-MacBook-Pro.local with PID 5181 (/Users/Licious/Desktop/testmysql/mysqldemo copy/target/classes started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-19 00:29:48,912 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-19 00:29:48,914 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-19 00:29:59,489 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-19 00:30:03,772 INFO org.springframework.boot.StartupInfoLogger [main] Started MysqldemoApplication in 21.24 seconds (JVM running for 22.63)
+2021-08-19 00:31:40,357 INFO org.springframework.boot.StartupInfoLogger [main] Starting DepartmentTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 5207 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-19 00:31:40,360 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-19 00:31:40,367 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-19 00:31:50,013 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-19 00:31:55,092 INFO org.springframework.boot.StartupInfoLogger [main] Started DepartmentTest in 20.604 seconds (JVM running for 23.303)
+2021-08-19 00:36:21,834 INFO org.springframework.boot.StartupInfoLogger [main] Starting DepartmentTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 5227 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-19 00:36:21,837 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-19 00:36:21,847 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-19 00:36:31,149 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-19 00:36:36,128 INFO org.springframework.boot.StartupInfoLogger [main] Started DepartmentTest in 20.07 seconds (JVM running for 23.182)
+2021-08-19 00:36:36,766 INFO com.example.mysqldemo.DepartmentTest [main] hi testing dept
+2021-08-19 00:37:29,656 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 5234 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-19 00:37:29,662 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-19 00:37:29,668 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-19 00:37:39,260 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-19 00:37:44,318 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 20.54 seconds (JVM running for 23.186)
+2021-08-19 00:37:45,016 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-19 00:37:45,016 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-19 00:39:31,059 INFO org.springframework.boot.StartupInfoLogger [main] Starting DepartmentTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 5244 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-19 00:39:31,061 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-19 00:39:31,066 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-19 00:39:40,710 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-19 00:39:45,451 INFO org.springframework.boot.StartupInfoLogger [main] Started DepartmentTest in 20.443 seconds (JVM running for 23.822)
+2021-08-19 00:39:46,095 INFO com.example.mysqldemo.DepartmentTest [main] hi testing dept
+2021-08-19 00:42:04,081 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 5259 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-19 00:42:04,083 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-19 00:42:04,090 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-19 00:42:13,461 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-19 00:42:18,404 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 20.162 seconds (JVM running for 22.873)
+2021-08-19 00:42:19,205 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-19 00:42:19,206 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-19 00:50:00,991 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 5286 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-19 00:50:00,995 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-19 00:50:01,002 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-19 00:50:11,044 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-19 00:50:16,129 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 20.871 seconds (JVM running for 23.842)
+2021-08-19 00:50:16,864 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-19 00:50:16,866 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-19 00:55:16,307 INFO org.springframework.boot.StartupInfoLogger [main] Starting MysqldemoApplication using Java 16.0.1 on Admins-MacBook-Pro.local with PID 5321 (/Users/Licious/Desktop/testmysql/mysqldemo copy/target/classes started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-19 00:55:16,329 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-19 00:55:16,330 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-19 00:55:27,543 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-19 00:55:32,280 INFO org.springframework.boot.StartupInfoLogger [main] Started MysqldemoApplication in 22.394 seconds (JVM running for 24.008)
+2021-08-19 00:55:52,292 TRACE com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-4] A TRACE Message
+2021-08-19 00:55:52,298 DEBUG com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-4] A DEBUG Message
+2021-08-19 00:55:52,299 INFO com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-4] An INFO Message
+2021-08-19 00:55:52,299 WARN com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-4] A WARN Message
+2021-08-19 00:55:52,299 ERROR com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-4] An ERROR Message
+2021-08-19 00:55:52,299 INFO com.example.mysqldemo.service.EmployeeControllerService [http-nio-8080-exec-4] hi entered
+2021-08-19 00:55:52,355 ERROR com.example.mysqldemo.exceptionHelper.ExceptionHelper [http-nio-8080-exec-4] Exception: 
+2021-08-19 00:56:01,072 TRACE com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-6] A TRACE Message
+2021-08-19 00:56:01,074 DEBUG com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-6] A DEBUG Message
+2021-08-19 00:56:01,074 INFO com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-6] An INFO Message
+2021-08-19 00:56:01,074 WARN com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-6] A WARN Message
+2021-08-19 00:56:01,075 ERROR com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-6] An ERROR Message
+2021-08-19 00:56:01,075 INFO com.example.mysqldemo.service.EmployeeControllerService [http-nio-8080-exec-6] hi entered
+2021-08-19 00:56:01,116 ERROR com.example.mysqldemo.exceptionHelper.ExceptionHelper [http-nio-8080-exec-6] Exception: 
+2021-08-19 00:56:05,725 TRACE com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-7] A TRACE Message
+2021-08-19 00:56:05,726 DEBUG com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-7] A DEBUG Message
+2021-08-19 00:56:05,726 INFO com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-7] An INFO Message
+2021-08-19 00:56:05,728 WARN com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-7] A WARN Message
+2021-08-19 00:56:05,730 ERROR com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-7] An ERROR Message
+2021-08-19 00:56:05,731 INFO com.example.mysqldemo.service.EmployeeControllerService [http-nio-8080-exec-7] hi entered
+2021-08-19 01:01:38,086 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 5350 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-19 01:01:38,093 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-19 01:01:38,101 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-19 01:01:50,086 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-19 01:01:56,518 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 24.555 seconds (JVM running for 30.299)
+2021-08-19 01:01:57,461 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-19 01:01:57,462 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-19 01:03:04,343 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 5361 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-19 01:03:04,346 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-19 01:03:04,360 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-19 01:03:14,822 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-19 01:03:20,065 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 21.628 seconds (JVM running for 24.359)
+2021-08-19 01:03:20,784 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-19 01:05:41,846 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m30s714ms).
+2021-08-19 01:05:41,883 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-19 01:09:02,122 INFO org.springframework.boot.StartupInfoLogger [main] Starting DepartmentTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 5391 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-19 01:09:02,128 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-19 01:09:02,134 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-19 01:09:17,124 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-19 01:09:24,239 INFO org.springframework.boot.StartupInfoLogger [main] Started DepartmentTest in 27.97 seconds (JVM running for 31.142)
+2021-08-19 01:09:25,126 INFO com.example.mysqldemo.DepartmentTest [main] hi testing dept

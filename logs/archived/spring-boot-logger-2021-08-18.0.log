@@ -1,0 +1,244 @@
+2021-08-18 00:10:50,378 INFO org.springframework.boot.StartupInfoLogger [main] Starting MysqldemoApplication using Java 16.0.1 on Admins-MacBook-Pro.local with PID 3216 (/Users/Licious/Desktop/testmysql/mysqldemo copy/target/classes started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 00:10:50,383 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 00:10:50,384 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 00:10:56,814 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'departmentController': Unsatisfied dependency expressed through field 'deptService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.mysqldemo.service.DepartmentControllerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-08-18 00:10:56,908 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field deptService in com.example.mysqldemo.controller.DepartmentController required a bean of type 'com.example.mysqldemo.service.DepartmentControllerService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.example.mysqldemo.service.DepartmentControllerService' in your configuration.
+
+2021-08-18 00:13:11,225 INFO org.springframework.boot.StartupInfoLogger [main] Starting MysqldemoApplication using Java 16.0.1 on Admins-MacBook-Pro.local with PID 3230 (/Users/Licious/Desktop/testmysql/mysqldemo copy/target/classes started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 00:13:11,229 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 00:13:11,229 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 00:13:17,281 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'departmentController': Unsatisfied dependency expressed through field 'deptService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.mysqldemo.service.DepartmentControllerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-08-18 00:13:17,367 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field deptService in com.example.mysqldemo.controller.DepartmentController required a bean of type 'com.example.mysqldemo.service.DepartmentControllerService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.example.mysqldemo.service.DepartmentControllerService' in your configuration.
+
+2021-08-18 00:13:51,230 INFO org.springframework.boot.StartupInfoLogger [main] Starting MysqldemoApplication using Java 16.0.1 on Admins-MacBook-Pro.local with PID 3236 (/Users/Licious/Desktop/testmysql/mysqldemo copy/target/classes started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 00:13:51,234 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 00:13:51,235 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 00:13:58,054 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 00:14:00,833 INFO org.springframework.boot.StartupInfoLogger [main] Started MysqldemoApplication in 15.269 seconds (JVM running for 15.967)
+2021-08-18 00:14:23,001 ERROR com.example.mysqldemo.exceptionHelper.ExceptionHelper [http-nio-8080-exec-6] Exception: 
+2021-08-18 00:14:53,892 ERROR com.example.mysqldemo.exceptionHelper.ExceptionHelper [http-nio-8080-exec-4] Invalid Input Exception: 
+2021-08-18 00:14:59,288 ERROR com.example.mysqldemo.exceptionHelper.ExceptionHelper [http-nio-8080-exec-5] Exception: 
+2021-08-18 21:55:53,827 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4286 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 21:55:53,833 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 21:55:53,841 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 21:56:04,943 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 21:56:09,898 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 21.831 seconds (JVM running for 24.953)
+2021-08-18 21:56:10,883 INFO com.example.mysqldemo.service.impl.employeeServiceimpl [main] executing success employee logic 
+2021-08-18 21:56:11,035 INFO com.example.mysqldemo.service.impl.employeeServiceimpl [main] executing failed employee logic 
+2021-08-18 21:56:11,085 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 21:56:11,132 INFO com.example.mysqldemo.EmployeeTest [main] hi testing dept
+2021-08-18 22:02:00,805 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4310 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 22:02:00,809 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 22:02:00,815 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 22:02:12,057 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 22:02:16,944 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 22.143 seconds (JVM running for 25.428)
+2021-08-18 22:02:17,754 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 22:02:17,816 INFO com.example.mysqldemo.EmployeeTest [main] hi testing dept
+2021-08-18 22:04:10,424 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4323 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 22:04:10,428 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 22:04:10,434 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 22:04:21,270 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 22:04:26,266 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 21.731 seconds (JVM running for 24.651)
+2021-08-18 22:04:27,054 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 22:04:27,115 INFO com.example.mysqldemo.EmployeeTest [main] hi testing dept
+2021-08-18 22:05:51,452 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4330 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 22:05:51,456 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 22:05:51,462 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 22:06:00,999 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 22:06:06,472 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 20.778 seconds (JVM running for 23.809)
+2021-08-18 22:06:07,345 INFO com.example.mysqldemo.service.impl.employeeServiceimpl [main] executing success employee logic 
+2021-08-18 22:06:07,472 INFO com.example.mysqldemo.service.impl.employeeServiceimpl [main] executing failed employee logic 
+2021-08-18 22:06:07,522 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 22:06:07,557 INFO com.example.mysqldemo.EmployeeTest [main] hi testing dept
+2021-08-18 22:10:19,053 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4358 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 22:10:19,057 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 22:10:19,063 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 22:10:28,516 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 22:10:33,500 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 20.359 seconds (JVM running for 23.506)
+2021-08-18 22:10:34,358 INFO com.example.mysqldemo.service.impl.employeeServiceimpl [main] executing success employee logic 
+2021-08-18 22:10:34,473 INFO com.example.mysqldemo.service.impl.employeeServiceimpl [main] executing failed employee logic 
+2021-08-18 22:10:34,525 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 22:10:34,565 INFO com.example.mysqldemo.EmployeeTest [main] hi testing dept
+2021-08-18 22:19:17,513 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4441 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 22:19:17,516 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 22:19:17,519 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 22:19:27,424 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 22:19:32,212 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 20.589 seconds (JVM running for 23.24)
+2021-08-18 22:19:32,992 INFO com.example.mysqldemo.service.impl.employeeServiceimpl [main] executing success employee logic 
+2021-08-18 22:19:33,174 INFO com.example.mysqldemo.service.impl.employeeServiceimpl [main] executing failed employee logic 
+2021-08-18 22:19:33,219 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 22:20:45,088 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4468 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 22:20:45,098 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 22:20:45,104 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 22:20:54,541 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 22:20:59,235 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 19.967 seconds (JVM running for 23.021)
+2021-08-18 22:21:00,128 INFO com.example.mysqldemo.service.impl.employeeServiceimpl [main] executing success employee logic 
+2021-08-18 22:21:00,257 INFO com.example.mysqldemo.service.impl.employeeServiceimpl [main] executing failed employee logic 
+2021-08-18 22:21:00,294 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 22:47:02,888 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4614 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 22:47:02,893 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 22:47:02,899 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 22:47:12,959 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 22:47:17,719 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 20.645 seconds (JVM running for 23.356)
+2021-08-18 22:47:18,487 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 22:47:18,489 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-18 22:48:37,986 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4623 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 22:48:37,988 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 22:48:37,997 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 22:48:47,331 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 22:48:52,008 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 19.874 seconds (JVM running for 22.677)
+2021-08-18 22:48:52,624 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 22:48:52,625 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-18 22:48:52,625 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-18 22:49:44,564 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4629 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 22:49:44,568 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 22:49:44,572 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 22:49:53,955 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 22:49:58,962 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 20.244 seconds (JVM running for 22.938)
+2021-08-18 22:49:59,647 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 22:49:59,647 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-18 22:52:22,333 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4652 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 22:52:22,338 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 22:52:22,344 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 22:52:31,795 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 22:52:36,341 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 19.839 seconds (JVM running for 22.689)
+2021-08-18 22:52:37,181 INFO com.example.mysqldemo.service.impl.employeeServiceimpl [main] executing success employee logic 
+2021-08-18 22:52:37,301 INFO com.example.mysqldemo.service.impl.employeeServiceimpl [main] executing failed employee logic 
+2021-08-18 22:52:37,337 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 22:52:37,338 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-18 22:57:17,580 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4666 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 22:57:17,582 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 22:57:17,589 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 22:57:26,886 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 22:57:31,733 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 20.035 seconds (JVM running for 22.817)
+2021-08-18 23:01:00,100 INFO org.springframework.boot.StartupInfoLogger [main] Starting DepartmentTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4695 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 23:01:00,103 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 23:01:00,108 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 23:01:09,658 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 23:01:14,754 INFO org.springframework.boot.StartupInfoLogger [main] Started DepartmentTest in 20.493 seconds (JVM running for 23.159)
+2021-08-18 23:01:15,366 INFO com.example.mysqldemo.DepartmentTest [main] hi testing dept
+2021-08-18 23:07:33,015 INFO org.springframework.boot.StartupInfoLogger [main] Starting MysqldemoApplication using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4736 (/Users/Licious/Desktop/testmysql/mysqldemo copy/target/classes started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 23:07:33,019 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 23:07:33,020 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 23:07:43,210 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 23:07:47,277 INFO org.springframework.boot.StartupInfoLogger [main] Started MysqldemoApplication in 20.632 seconds (JVM running for 22.389)
+2021-08-18 23:10:12,138 TRACE com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-5] A TRACE Message
+2021-08-18 23:10:12,152 DEBUG com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-5] A DEBUG Message
+2021-08-18 23:10:12,154 INFO com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-5] An INFO Message
+2021-08-18 23:10:12,155 WARN com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-5] A WARN Message
+2021-08-18 23:10:12,157 ERROR com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-5] An ERROR Message
+2021-08-18 23:10:12,159 INFO com.example.mysqldemo.service.EmployeeControllerService [http-nio-8080-exec-5] hi entered
+2021-08-18 23:10:12,366 ERROR com.example.mysqldemo.exceptionHelper.ExceptionHelper [http-nio-8080-exec-5] Exception: 
+2021-08-18 23:10:17,478 TRACE com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-7] A TRACE Message
+2021-08-18 23:10:17,481 DEBUG com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-7] A DEBUG Message
+2021-08-18 23:10:17,482 INFO com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-7] An INFO Message
+2021-08-18 23:10:17,482 WARN com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-7] A WARN Message
+2021-08-18 23:10:17,482 ERROR com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-7] An ERROR Message
+2021-08-18 23:10:17,483 INFO com.example.mysqldemo.service.EmployeeControllerService [http-nio-8080-exec-7] hi entered
+2021-08-18 23:13:39,494 INFO org.springframework.boot.StartupInfoLogger [main] Starting MysqldemoApplication using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4807 (/Users/Licious/Desktop/testmysql/mysqldemo copy/target/classes started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 23:13:39,501 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 23:13:39,502 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 23:13:50,265 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 23:13:54,857 INFO org.springframework.boot.StartupInfoLogger [main] Started MysqldemoApplication in 21.608 seconds (JVM running for 23.59)
+2021-08-18 23:19:38,277 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4827 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 23:19:38,280 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 23:19:38,286 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 23:19:48,174 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 23:19:52,909 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 20.427 seconds (JVM running for 23.243)
+2021-08-18 23:19:53,699 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 23:19:53,701 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-18 23:20:45,153 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4837 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 23:20:45,155 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 23:20:45,159 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 23:20:54,792 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 23:20:59,837 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 20.513 seconds (JVM running for 23.25)
+2021-08-18 23:21:00,457 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 23:21:00,458 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-18 23:24:28,324 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4855 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 23:24:28,330 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 23:24:28,333 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 23:24:37,882 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 23:24:42,842 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 20.296 seconds (JVM running for 22.93)
+2021-08-18 23:24:43,529 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 23:24:43,529 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-18 23:41:34,148 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4922 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 23:41:34,152 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 23:41:34,159 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 23:41:43,956 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 23:41:48,692 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 20.384 seconds (JVM running for 23.15)
+2021-08-18 23:41:49,309 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 23:41:49,310 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-18 23:42:48,583 INFO org.springframework.boot.StartupInfoLogger [main] Starting MysqldemoApplication using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4929 (/Users/Licious/Desktop/testmysql/mysqldemo copy/target/classes started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 23:42:48,590 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 23:42:48,590 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 23:42:59,251 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 23:43:03,663 INFO org.springframework.boot.StartupInfoLogger [main] Started MysqldemoApplication in 21.189 seconds (JVM running for 22.357)
+2021-08-18 23:43:12,159 TRACE com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-2] A TRACE Message
+2021-08-18 23:43:12,160 DEBUG com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-2] A DEBUG Message
+2021-08-18 23:43:12,160 INFO com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-2] An INFO Message
+2021-08-18 23:43:12,162 WARN com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-2] A WARN Message
+2021-08-18 23:43:12,163 ERROR com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-2] An ERROR Message
+2021-08-18 23:43:12,173 INFO com.example.mysqldemo.service.EmployeeControllerService [http-nio-8080-exec-2] hi entered
+2021-08-18 23:43:36,482 TRACE com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-4] A TRACE Message
+2021-08-18 23:43:36,484 DEBUG com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-4] A DEBUG Message
+2021-08-18 23:43:36,486 INFO com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-4] An INFO Message
+2021-08-18 23:43:36,487 WARN com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-4] A WARN Message
+2021-08-18 23:43:36,489 ERROR com.example.mysqldemo.controller.EmployeeController [http-nio-8080-exec-4] An ERROR Message
+2021-08-18 23:43:36,489 INFO com.example.mysqldemo.service.EmployeeControllerService [http-nio-8080-exec-4] hi entered
+2021-08-18 23:43:36,527 ERROR com.example.mysqldemo.exceptionHelper.ExceptionHelper [http-nio-8080-exec-4] Exception: 
+2021-08-18 23:44:35,178 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4937 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 23:44:35,184 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 23:44:35,199 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 23:44:44,584 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 23:44:49,373 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 19.952 seconds (JVM running for 23.214)
+2021-08-18 23:44:50,165 INFO com.example.mysqldemo.EmployeeTest [main] hi testing
+2021-08-18 23:44:50,170 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-18 23:54:34,100 INFO org.springframework.boot.StartupInfoLogger [main] Starting EmployeeTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4967 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 23:54:34,106 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 23:54:34,113 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 23:54:43,552 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 23:54:48,608 INFO org.springframework.boot.StartupInfoLogger [main] Started EmployeeTest in 20.382 seconds (JVM running for 22.989)
+2021-08-18 23:54:49,254 TRACE com.example.mysqldemo.controller.EmployeeController [main] A TRACE Message
+2021-08-18 23:54:49,255 DEBUG com.example.mysqldemo.controller.EmployeeController [main] A DEBUG Message
+2021-08-18 23:54:49,255 INFO com.example.mysqldemo.controller.EmployeeController [main] An INFO Message
+2021-08-18 23:54:49,255 WARN com.example.mysqldemo.controller.EmployeeController [main] A WARN Message
+2021-08-18 23:54:49,255 ERROR com.example.mysqldemo.controller.EmployeeController [main] An ERROR Message
+2021-08-18 23:54:49,262 INFO com.example.mysqldemo.service.EmployeeControllerService [main] hi entered
+2021-08-18 23:57:54,156 INFO org.springframework.boot.StartupInfoLogger [main] Starting DepartmentTest using Java 16.0.1 on Admins-MacBook-Pro.local with PID 4988 (started by Licious in /Users/Licious/Desktop/testmysql/mysqldemo copy)
+2021-08-18 23:57:54,162 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 23:57:54,167 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-08-18 23:58:03,884 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 23:58:09,347 INFO org.springframework.boot.StartupInfoLogger [main] Started DepartmentTest in 20.949 seconds (JVM running for 24.098)
+2021-08-18 23:58:10,293 ERROR com.example.mysqldemo.exceptionHelper.ExceptionHelper [main] Exception: 

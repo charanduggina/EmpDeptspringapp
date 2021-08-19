@@ -1,16 +1,18 @@
 package com.example.mysqldemo.service;
 
 import com.example.mysqldemo.dao.DepartmentRepo;
+import com.example.mysqldemo.dao.EmployeeRepo;
 import com.example.mysqldemo.dto.DepartmentDTO;
 import com.example.mysqldemo.mapper.DepartmentMapper;
 import com.example.mysqldemo.model.Department;
-import com.example.mysqldemo.model.Employee;
 import org.eclipse.jdt.core.compiler.InvalidInputException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class DepartmentControllerService {
@@ -19,21 +21,23 @@ public class DepartmentControllerService {
     @Autowired
     private DepartmentMapper departmentMapper;
 
-    public List<Department> getAllDepartments(){
 
-        return departmentRepo.findAll();
+    public List<DepartmentDTO> getAllDepartments(){
+
+        return departmentRepo.findAll().stream().map(DepartmentDTO::modelToDto).collect(Collectors.toCollection(ArrayList::new));
     }
 
-    public Optional<Department> getDepartmentById(int deptnumber) throws InvalidInputException {
+    public Optional<DepartmentDTO> getDepartmentById(int deptnumber) throws InvalidInputException {
         if(0 == deptnumber ) {
             throw new InvalidInputException("Department Id is not valid");
         }
 
-        return Optional.of(departmentRepo.findById(deptnumber).get());
+
+        return Optional.of(DepartmentDTO.modelToDto(departmentRepo.findById(deptnumber).get()));
     }
     public DepartmentDTO saveDepartment(Department department){
         Department saveddepartment = departmentRepo.save(department);
-       return  departmentMapper.modelTODto(saveddepartment);
+       return  DepartmentDTO.modelToDto(saveddepartment);
     }
 
     public void deleteDepartment(int deptId) throws InvalidInputException {

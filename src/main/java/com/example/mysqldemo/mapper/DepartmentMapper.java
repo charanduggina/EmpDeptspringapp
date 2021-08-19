@@ -14,10 +14,10 @@ public interface DepartmentMapper {
     DepartmentMapper INSTANCE = Mappers.getMapper(DepartmentMapper.class);
 
     //@Mapping(source = "department.Location",target = "place")//defaultValue = "abc" this is to set the default value
-     DepartmentDTO modelTODto(Department department);
-     EmployeeDTO toDto(Employee employee);
-     Department toModel(DepartmentDTO departmentDTO);
-     Employee toModel(EmployeeDTO employeeDTO);
+     //DepartmentDTO modelTODepartmentDto(Department department);
+     EmployeeDTO toEmployeeDto(Employee employee);
+     Department toDepartmentModel(DepartmentDTO departmentDTO);
+     Employee toEmployeeModel(EmployeeDTO employeeDTO);
 
 
 }

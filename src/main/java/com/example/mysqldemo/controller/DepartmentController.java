@@ -27,14 +27,14 @@ public class DepartmentController {
     @Autowired
     private DepartmentControllerService deptService;
     @GetMapping("/departments")
-    public ResponseEntity<List<Employee>> getDepartment(){
+    public ResponseEntity<List<DepartmentDTO>> getDepartment(){
 
         return new ResponseEntity( deptService.getAllDepartments(), HttpStatus.OK);
 
     }
 
     @RequestMapping("/department/{Deptnumber}")
-    public ResponseEntity<Optional<Department>> getDepartment(@PathVariable("Deptnumber") int deptnumber) throws InvalidInputException {
+    public ResponseEntity<Optional<DepartmentDTO>> getDepartment(@PathVariable("Deptnumber") int deptnumber) throws InvalidInputException {
         return new ResponseEntity(deptService.getDepartmentById(deptnumber),HttpStatus.OK);
     }
 

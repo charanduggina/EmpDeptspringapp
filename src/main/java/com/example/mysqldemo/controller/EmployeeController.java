@@ -62,11 +62,11 @@ public class EmployeeController {
             value= "get all the Employee list",
             notes = "this api gives the list of all the employee saved in the database"
     )
-    public ResponseEntity<List<Employee>> getEmployees(){
+    public ResponseEntity<List<EmployeeDTO>> getEmployees(){
         return new ResponseEntity( empservice.getAllEmployees(), HttpStatus.OK);
     }
     @RequestMapping("/employee/{empid}")
-    public ResponseEntity<Optional<Employee>> getEmployee(@ApiParam(value = "ID of the employee you want to retrive",required = true) @PathVariable("empid") int empid) throws InvalidInputException {
+    public ResponseEntity<Optional<EmployeeDTO>> getEmployee(@ApiParam(value = "ID of the employee you want to retrive",required = true) @PathVariable("empid") int empid) throws InvalidInputException {
         log.trace("A TRACE Message");
         log.debug("A DEBUG Message");
         log.info("An INFO Message");
